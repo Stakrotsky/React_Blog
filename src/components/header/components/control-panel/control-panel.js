@@ -1,42 +1,53 @@
 import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { Icon } from '../../../../components';
+import { Icon, Button } from '../../../../components';
+import { ROLE } from '../../../../constants';
+import {
+	selectUserLogin,
+	selectUserRole,
+	selectUserSession,
+} from '../../../../selectors';
+import { logout } from '../../../../actions';
 
 const RightAligned = styled.div`
 	display: flex;
 	justify-content: flex-end;
-`;
-
-const StyledLink = styled(Link)`
-	display: flex;
-	justify-content: center;
 	align-items: center;
-	font-size: 18px;
-	width: 100px;
-	height: 32px;
-
-	background-color: #eee;
-	border: 1px solid #000;
 `;
 
-const StyledButton = styled.div`
-	&:hover {
-		cursor: pointer;
-	}
+const UserName = styled.div`
+	font-size: 18px;
+	font-weight: bold;
 `;
 
 const ControlPanelContainer = ({ className }) => {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const roleId = useSelector(selectUserRole);
+	const login = useSelector(selectUserLogin);
+	const session = useSelector(selectUserSession);
+
 	return (
 		<div className={className}>
 			<RightAligned>
-				<StyledLink to="/login">Войти</StyledLink>
+				{roleId === ROLE.GUEST ? (
+					<Button>
+						<Link to="/login">Войти</Link>
+					</Button>
+				) : (
+					<>
+						<UserName>{login}</UserName>
+						<Icon
+							onClick={() => dispatch(logout(session))}
+							id="fa-sign-out"
+							margin="0 0 0 10px"
+						/>
+					</>
+				)}
 			</RightAligned>
 			<RightAligned>
-				<StyledButton onClick={() => navigate(-1)}>
-					<Icon id="fa-backward" margin="10px 0 0 0" />
-				</StyledButton>
-
+				<Icon onClick={() => navigate(-1)} id="fa-backward" margin="10px 0 0 0" />
 				<Link to="/post">
 					<Icon id="fa-file-text-o" margin="10px 0 0 17px" />
 				</Link>
