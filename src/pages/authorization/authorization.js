@@ -52,11 +52,8 @@ const AuthorizationContainer = ({ className }) => {
 	});
 
 	const [serverError, setServerError] = useState(null);
-
 	const dispatch = useDispatch();
-
 	const roleId = useSelector(selectUserRole);
-
 	useResetForm(reset);
 
 	const onSubmit = ({ login, password }) => {
@@ -65,8 +62,8 @@ const AuthorizationContainer = ({ className }) => {
 				setServerError(`Ошибка запроса: ${error}`);
 				return;
 			}
-
 			dispatch(setUser(res));
+			sessionStorage.setItem('userData', JSON.stringify(res));
 		});
 	};
 	const formError = errors?.login?.message || errors?.password?.message;
