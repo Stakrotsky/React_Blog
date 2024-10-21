@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import { Authorization, Registration, Users, Post } from './pages';
-import { Header, Footer } from './components';
+import { Header, Footer, Modal } from './components';
 import { useDispatch } from 'react-redux';
 import { setUser } from './actions';
 import { useLayoutEffect } from 'react';
@@ -53,6 +53,7 @@ export const Blog = () => {
 				</Routes>
 			</Page>
 			<Footer />
+			<Modal />
 		</AppColumn>
 	);
 };

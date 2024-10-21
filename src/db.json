@@ -100,34 +100,6 @@
   ],
   "comments": [
     {
-      "id": "8f41",
-      "author_id": "5c9e",
-      "post_id": "001",
-      "published_at": "2057-05-13 21:07",
-      "content": "1234"
-    },
-    {
-      "id": "186d",
-      "author_id": "5c9e",
-      "post_id": "001",
-      "published_at": "2039-08-18 01:08",
-      "content": "Мой первый комментарий\n"
-    },
-    {
-      "id": "eac4",
-      "author_id": "5c9e",
-      "post_id": "001",
-      "published_at": "2061-08-14 12:57",
-      "content": "123"
-    },
-    {
-      "id": "d123",
-      "author_id": "5c9e",
-      "post_id": "001",
-      "published_at": "2048-02-08 11:51",
-      "content": "1234"
-    },
-    {
       "id": "7b20",
       "author_id": "5c9e",
       "post_id": "001",
@@ -135,30 +107,23 @@
       "content": "12345"
     },
     {
-      "id": "2606",
-      "author_id": "5c9e",
+      "id": "a4c0",
+      "author_id": "81cd",
       "post_id": "001",
-      "published_at": "2048-05-27 06:29",
-      "content": "12345"
-    },
-    {
-      "id": "9411",
-      "author_id": "5c9e",
-      "post_id": "001",
-      "published_at": "2061-07-17 05:29",
+      "published_at": "2043-11-24 15:28",
       "content": "123"
     }
   ],
   "sessions": [
     {
-      "id": "7c4e",
-      "hash": "0.01312723189419928715437890787143260240554809570313",
+      "id": "c1d3",
+      "hash": "0.75625960523627977494243168621324002742767333984375",
       "user": {
-        "id": "5c9e",
-        "login": "sta1",
-        "password": "qwe123",
-        "registedAt": "2040-06-26 05:52",
-        "roleId": 1
+        "id": "81cd",
+        "login": "sta",
+        "password": "qweqwe",
+        "registedAt": "2036-09-08 20:22",
+        "roleId": 0
       }
     }
   ]

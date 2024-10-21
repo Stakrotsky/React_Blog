@@ -1,4 +1,5 @@
 export const transformComments = (dbComment) => ({
+	id: dbComment.id,
 	author: dbComment.author,
 	postId: dbComment.post_id,
 	authorId: dbComment.author_id,
